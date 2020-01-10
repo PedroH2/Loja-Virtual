@@ -1,0 +1,24 @@
+<%- contentFor('body') %> 
+
+<div class="jumbotron text-center"> 
+   
+   
+<!-- DEFINIÇÃO DO CORPO DA PAGINA -->
+
+<div class="container" id="cardLivros">
+  <h1>Destinos mais famosos</h1>
+      <div class="card-deck">
+          <% for (var i = 0; i<Viagens.length; i++){ %>                        
+              <div class="card">
+                <a href="/viagem/<%=Viagens[i].id_viag%>">
+                  
+                    <img src="<%=Viagens[i].img_link%>" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title"><%= Viagens[i].nome_cidade %></h5>
+                  <p class="card-text content-justify"><%= Viagens[i].desc_cidade %></p>
+                </div>
+              </div>
+        <%} %>
+      </div>
+  </div>
+</div>

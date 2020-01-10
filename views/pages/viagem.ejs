@@ -1,0 +1,64 @@
+
+<%- contentFor('body') %> 
+
+<div class="jumbotron text-center">
+    <div class="container" id = "cardLivros ">
+            
+        <h1>    detalhes da viagem</h1>
+            <fieldset>
+                  <img src="<%=Viagens[0].img_link%>"  alt="...">
+                          
+                          <br> <br> 
+                          <button type="button" class="btn btn-outline-success" onclick= "InserirnopctCOMUMBD()" >COMPRAR PACOTE COMUM 99,99</button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-outline-success" onclick= "InserirnopctPremiumBD()" >COMPRAR PACOTE PREMIUM 199,99</button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-outline-success" onclick= "InserirnopctMCLASSBD() " >COMPRAR PACOTE MASTERCLASS 299,99</button>
+                        <br>
+                        <br>    
+                    <h5>País<br></h5>
+                  <%= Viagens[0].nome_local%></td>
+                  <br>
+                   <h5>Rota de viagem</h5>
+                   <br>
+                   
+                  <div class ="texto text-align: center"><%= Viagens[0].cidade%></div> <br>
+                  <h5>Um pouco sobre o seu destino</h5>
+                      <br>
+                  <%= Viagens[0].desc_cidade%>
+            
+      
+            </fieldset>
+            
+
+
+            <!-- Não consegui fazer o carrinho-->
+              <script type="text/javascript">
+
+                  function InserirnopctCOMUMBD() 
+                  {
+                     var sqlConnection;
+                     sqlConnection = "insert into carrinhoViagem values (99.99)";
+                     confirm("Deseja comprar o pacote COMUM por RS 99.99?");
+                  }
+                  function InserirnopctPremiumBD() 
+                  {
+                     var sqlConnection;
+                     
+                     confirm("Deseja comprar o pacote COMUM por RS 199.99?");
+                     sqlConnection = "insert into carrinhoViagem values (199.99)";
+                     
+                  }
+                  function InserirnopctMCLASSBD() 
+                  {
+                     var sqlConnection;
+                     sqlConnection = "insert into carrinhoViagem values (299.99)";
+                     confirm("Deseja comprar o pacote COMUM por RS 299.99?");
+                  }
+              </script>
+    </div>
+</div>
+
+
