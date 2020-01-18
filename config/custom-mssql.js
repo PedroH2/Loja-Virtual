@@ -1,8 +1,8 @@
 var mssql = require ('mssql');
 
 const config = {
-    user: 'BD19381',
-    password: 'megaware2010',
+    user: '*******',
+    password: '*********',
     server: 'regulus.cotuca.unicamp.br',
     database: 'BD19381'
 };
